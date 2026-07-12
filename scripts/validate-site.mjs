@@ -24,4 +24,12 @@ assert.ok(html.includes('mailto:westbrooguan@qq.com'), "missing email action");
 assert.ok(css.includes("prefers-reduced-motion"), "missing reduced-motion support");
 assert.ok(css.includes(":focus-visible"), "missing visible keyboard focus");
 assert.ok(js.includes("IntersectionObserver"), "missing progressive reveal behavior");
+assert.ok(
+  html.includes('<html class="no-js" lang="zh-CN">') &&
+    css.includes(".js .reveal { opacity: 0;") &&
+    !css.includes("\n.reveal { opacity: 0;") &&
+    js.includes('document.documentElement.classList.replace("no-js", "js")'),
+  "reveal content must be visible by default and hidden only after JavaScript enhancement",
+);
+assert.ok(!css.includes("--muted: #6e716e;"), "muted text color does not meet WCAG AA contrast");
 console.log(`Validated ${root}`);

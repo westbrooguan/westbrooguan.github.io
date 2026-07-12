@@ -10,6 +10,5 @@ if ("IntersectionObserver" in window && !matchMedia("(prefers-reduced-motion: re
     }
   }, { threshold: 0.12 });
   items.forEach((item) => observer.observe(item));
-} else {
-  items.forEach((item) => item.classList.add("is-visible"));
+  document.documentElement.classList.replace("no-js", "js");
 }
