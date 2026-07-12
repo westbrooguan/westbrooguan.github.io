@@ -1,0 +1,10 @@
+{
+  "name": "westbrooguan.github.io",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "python3 -m http.server 4173 -d src",
+    "test": "node scripts/validate-site.mjs",
+    "build": "node scripts/build.mjs"
+  }
+}
