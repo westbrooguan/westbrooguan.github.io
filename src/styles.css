@@ -18,7 +18,7 @@ a { color: inherit; text-decoration-thickness: .08em; text-underline-offset: .18
 .site-header, main, footer { width: min(1320px, calc(100% - 48px)); margin-inline: auto; }
 .site-header { position: absolute; inset: 0 0 auto; height: 76px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--line); }
 .wordmark { font-size: 1.2rem; font-weight: 700; text-decoration: none; }
-nav { display: flex; gap: clamp(16px, 3vw, 36px); }
+nav { display: flex; flex-wrap: wrap; gap: clamp(16px, 3vw, 36px); }
 nav a { color: var(--muted); font-size: .92rem; text-decoration: none; }
 nav a:hover { color: var(--ink); }
 .hero { min-height: 72vh; display: grid; align-content: end; grid-template-columns: minmax(0, 2fr) minmax(240px, 1fr); gap: 32px; padding: 128px 0 72px; }
@@ -73,7 +73,6 @@ footer { display: flex; justify-content: space-between; padding: 28px 0 40px; co
   .metrics article:last-child { border-bottom: 0; }
   .hero { min-height: auto; padding-top: 112px; }
   nav { gap: 14px; }
-  nav a:nth-child(3) { display: none; }
   .section, .contact { padding: 96px 0; }
   .timeline article { grid-template-columns: 1fr; gap: 10px; }
 }
